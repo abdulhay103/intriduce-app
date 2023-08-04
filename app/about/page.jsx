@@ -1,3 +1,4 @@
+import User from "./userCard/user";
 async function getData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   return res.json();
@@ -7,10 +8,12 @@ const page = async () => {
   const data = await getData();
 
   return (
-    <div>
-      {data.map((user, i) => {
-        return <h1 key={i}>Hello</h1>;
-      })}
+    <div className=" container mx-auto bg-green-100 h-screen">
+      <ul>
+        {data.map((user) => {
+          return <User key={user.id} user={user} />;
+        })}
+      </ul>
     </div>
   );
 };

@@ -1,6 +1,11 @@
-import React from "react";
+async function getData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  return res.json();
+}
 
-const page = () => {
+const page = async () => {
+  const data = await getData();
+  console.log(data);
   return (
     <div>
       <h1>Hello Next</h1>

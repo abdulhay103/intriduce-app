@@ -1,15 +1,16 @@
 async function getData() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
   return res.json();
 }
 
 const page = async () => {
   const data = await getData();
-  console.log(data);
 
   return (
     <div>
-      <h1>From about page</h1>
+      {data.map((user, i) => {
+        <h1 key={i}>Hello</h1>;
+      })}
     </div>
   );
 };

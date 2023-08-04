@@ -9,7 +9,7 @@ const page = async () => {
   return (
     <div>
       {data.map((user, i) => {
-        <h1 key={i}>Hello</h1>;
+        return <h1 key={i}>Hello</h1>;
       })}
     </div>
   );

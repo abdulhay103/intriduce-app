@@ -10,7 +10,9 @@ const Header = () => {
     <header className="bg-white shadow fixed w-full">
       <nav className=" w-full flex justify-between py-3 container mx-auto">
         <div className=" w-28">
-          <Link href="/">Next User</Link>
+          <Link className="font-black text-orange-500" href="/">
+            Next User
+          </Link>
         </div>
         <ul className="flex gap-5">
           {navData.map((link) => {
@@ -18,7 +20,11 @@ const Header = () => {
             return (
               <li key={link.id}>
                 <Link
-                  className={isActive ? "text-orange-600" : "text-lime-600"}
+                  className={
+                    isActive
+                      ? "text-orange-600 font-bold"
+                      : "text-lime-600 font-bold hover:text-orange-500 hover:underline hover:underline-offset-2"
+                  }
                   href={link.href}
                 >
                   {link.name}

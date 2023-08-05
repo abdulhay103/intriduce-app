@@ -10,8 +10,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
+        <div className=" bg-gradient-to-br from-green-50 via-orange-50 to-sky-100 w-full h-screen">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

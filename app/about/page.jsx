@@ -8,7 +8,7 @@ const page = async () => {
   const data = await getData();
 
   return (
-    <div className=" container mx-auto bg-green-100 h-screen">
+    <div className=" container mx-auto h-screen">
       <ul>
         {data.map((user) => {
           return <User key={user.id} user={user} />;

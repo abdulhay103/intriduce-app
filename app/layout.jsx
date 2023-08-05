@@ -1,4 +1,5 @@
 import "./globals.css";
+import Footer from "./src/utils/Footer";
 import Header from "./src/utils/Header";
 
 export const metadata = {
@@ -10,9 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className=" bg-gradient-to-br from-green-50 via-orange-50 to-sky-100 w-full h-screen">
+        <div className=" bg-gradient-to-br from-green-50 via-orange-50 to-sky-100 w-full min-h-screen">
           <Header />
-          {children}
+          <div className=" container mx-auto py-20"> {children}</div>
+          <Footer />
         </div>
       </body>
     </html>

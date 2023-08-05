@@ -10,7 +10,7 @@ const page = async () => {
   const data = await getData();
 
   return (
-    <div className=" container mx-auto py-20">
+    <div className="">
       <ul className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 md:p-0 lg:p-0">
         {data.map((user) => {
           return <User key={user.id} user={user} />;

@@ -14,7 +14,7 @@ const Header = () => {
             Next User
           </Link>
         </div>
-        <ul className="flex gap-5">
+        <div className="flex gap-5">
           {navData.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -32,7 +32,7 @@ const Header = () => {
               </li>
             );
           })}
-        </ul>
+        </div>
       </nav>
     </header>
   );

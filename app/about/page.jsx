@@ -1,18 +1,29 @@
+"use client";
+import { useEffect, useState } from "react";
 import User from "./userCard/user";
-async function getData() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  return res.json();
-}
 
-const page = async () => {
-  const data = await getData();
-
+const page = () => {
+  const [users, setUsers] = useState();
+  useEffect(() => {
+    (async () => {
+      const res = await fetch("https://jsonplaceholder.typicode.com/users");
+      console.log(res);
+      if (res.status == 200) {
+        const data = await res.json();
+        console.log(data);
+        setUsers(data);
+      }
+    })();
+  }, []);
+  console.log(users);
   return (
     <div className="">
       <ul>
-        {data.map((user) => {
-          return <User key={user.id} user={user} />;
-        })}
+        {users
+          ? users.map((user) => {
+              return <User key={user.id} user={user} />;
+            })
+          : ""}
       </ul>
     </div>
   );

@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <div className=" container mx-auto py-20"> {children}</div>
           <ProgressBar
             height="3px"
-            color="#65A30D"
+            color="#F97316"
             options={{ showSpinner: false }}
             shallowRouting
           />

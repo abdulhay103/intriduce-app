@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import User from "./userCard/user";
+import Loader from "../src/components/Loader";
+// import PageLoader from "next/dist/client/page-loader";
 
 const page = () => {
   const [users, setUsers] = useState();
@@ -18,12 +20,17 @@ const page = () => {
   console.log(users);
   return (
     <div className="">
-      <ul>
-        {users
-          ? users.map((user) => {
-              return <User key={user.id} user={user} />;
-            })
-          : ""}
+      <h1 className="py-3 text-lg font-bold text-orange-500">
+        Client side API Rendaring
+      </h1>
+      <ul className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 md:p-0 lg:p-0">
+        {users ? (
+          users.map((user) => {
+            return <User key={user.id} user={user} />;
+          })
+        ) : (
+          <Loader />
+        )}
       </ul>
     </div>
   );

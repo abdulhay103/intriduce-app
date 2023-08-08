@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import navData from "../data/navData.js";
+import navData from "../utils/navData.js";
 import { usePathname } from "next/navigation";
 
 const Header = () => {

@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import User from "./userCard/user";
+import Loader from "../src/components/Loader";
+// import PageLoader from "next/dist/client/page-loader";
 
 const page = () => {
   const [users, setUsers] = useState();
@@ -19,11 +21,13 @@ const page = () => {
   return (
     <div className="">
       <ul>
-        {users
-          ? users.map((user) => {
-              return <User key={user.id} user={user} />;
-            })
-          : ""}
+        {users ? (
+          users.map((user) => {
+            return <User key={user.id} user={user} />;
+          })
+        ) : (
+          <Loader />
+        )}
       </ul>
     </div>
   );

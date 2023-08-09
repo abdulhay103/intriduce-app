@@ -17,7 +17,7 @@ const page = () => {
 
   return (
     <div className="">
-      <h1>from Blog page</h1>
+      <h1> Set Cokie function available from Blog page</h1>
     </div>
   );
 };

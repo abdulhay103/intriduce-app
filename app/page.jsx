@@ -1,5 +1,5 @@
 import React from "react";
-import User from "./src/userCard/User";
+import User from "./userCard/User";
 
 async function getData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");

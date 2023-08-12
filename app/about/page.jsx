@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import User from "./userCard/user";
-import Loader from "../src/components/Loader";
+import Loader from "../components/Loader";
 
 const page = () => {
   const [users, setUsers] = useState();

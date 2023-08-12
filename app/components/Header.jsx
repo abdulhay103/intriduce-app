@@ -3,8 +3,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import navData from "../utils/navData.js";
 import { usePathname } from "next/navigation";
-import Menbar from "../../../public/bar.svg";
-import UpDown from "../../../public/up-down.svg";
+import Menbar from "../../public/bar.svg";
+import UpDown from "../../public/up-down.svg";
 import Image from "next/image.js";
 
 const Header = () => {
@@ -25,14 +25,9 @@ const Header = () => {
         <div className="lg:hidden">
           <button onClick={toggleBtn}>
             {isToggle ? (
-              <Image
-                src={"/up-down.svg"}
-                alt="menu Icon"
-                width={24}
-                height={24}
-              />
+              <Image src={UpDown} alt="menu Icon" width={24} height={24} />
             ) : (
-              <Image src={"/bar.svg"} alt="Menu Icon" width={24} height={24} />
+              <Image src={Menbar} alt="Menu Icon" width={24} height={24} />
             )}
           </button>
         </div>

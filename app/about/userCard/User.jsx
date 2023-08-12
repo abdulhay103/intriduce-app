@@ -1,4 +1,4 @@
-import Button from "@/app/src/components/Button";
+import Button from "@/app/components/Button";
 import React from "react";
 
 const user = ({ user }) => {
